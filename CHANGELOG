@@ -1,4 +1,7 @@
 GJClasses CHANGELOG
 ===================
+v0.2.0    2018-04-12
+- Add Database class
+
 v0.1.0    2018-04-11
 - Initial release
