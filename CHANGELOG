@@ -1,5 +1,8 @@
 GJClasses CHANGELOG
 ===================
+v0.5.0    2018-04-13
+- Added convertAmount method to Money class
+
 v0.4.0    2018-04-13
 - Changed PHP version requirement from 5.3 to 5.4
 - Added PHPMailer (5.2.*) requirement via Composer
