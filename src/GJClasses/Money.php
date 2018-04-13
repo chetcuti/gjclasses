@@ -10,6 +10,11 @@ class Money
         $this->log = new Log('class.money');
     }
 
+    public function convertAmount($amount, $from_currency, $to_currency)
+    {
+        return $this->getConvRate($from_currency, $to_currency) * $amount;
+    }
+
     public function getConvRate($from_currency, $to_currency)
     {
         list($currency_slug, $full_url) = $this->getConvUrl($from_currency, $to_currency);
