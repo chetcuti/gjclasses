@@ -18,7 +18,7 @@ class Money
         $json_result = json_decode($result);
         $conversion_rate = $json_result->{$currency_slug}->val;
 
-        if (!is_null($conversion_rate) && $conversion_rate != '' && $conversion_rate != 'n/a' && $conversion_rate != 'N/A') {
+        if (!is_null($conversion_rate) && $conversion_rate != '') {
 
             return $conversion_rate;
 
