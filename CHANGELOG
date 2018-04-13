@@ -1,5 +1,13 @@
 GJClasses CHANGELOG
 ===================
+v0.4.0    2018-04-13
+- Changed PHP version requirement from 5.3 to 5.4
+- Added PHPMailer (5.2.*) requirement via Composer
+- Added Pushbullet for PHP (3.*) requirement via Composer
+- Added Remote class
+- Added Money class
+- Added Money class example
+
 v0.3.0    2018-04-13
 - Add Log class
 - Add Log class table SQL
