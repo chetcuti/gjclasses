@@ -1,5 +1,7 @@
 GJClasses
 =========
+[![Build Status](https://scrutinizer-ci.com/g/chetcuti/gjclasses/badges/build.png?b=master)](https://scrutinizer-ci.com/g/chetcuti/gjclasses/build-status/master) [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/chetcuti/gjclasses/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/chetcuti/gjclasses/?branch=master)
+  
 An ever-expanding collection of classes for personal development projects.
 
 Installing
