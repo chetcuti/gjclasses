@@ -1,5 +1,13 @@
 GJClasses CHANGELOG
 ===================
+v0.3.0    2018-04-13
+- Add Log class
+- Add Log class table SQL
+- Add Log class example
+- Add Time class
+- Add Export class
+- Add init.inc.php
+
 v0.2.0    2018-04-12
 - Add Database class
 
