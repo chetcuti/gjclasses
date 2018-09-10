@@ -1,5 +1,12 @@
 GJClasses CHANGELOG
 ===================
+v0.6.0    2018-09-10
+- Added Ping class
+- Added Ping class example
+- Added composer.lock file
+- Added DIR_TEMP declaration to init.inc.php
+- Updated location of log file
+
 v0.5.0    2018-04-13
 - Added convertAmount method to Money class
 
