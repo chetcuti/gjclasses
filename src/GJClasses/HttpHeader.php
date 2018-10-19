@@ -140,39 +140,27 @@ class HttpHeader
             'Redirect, Permanent (301) [Multiple Redirects]' || $http_header_status === 'Redirect, Temporary (302)' ||
             $http_header_status === 'Redirect, Temporary (302) [Multiple Redirects]') {
 
+            $header_data_array = explode(" -> ", $http_header_data);
+
             // standard port
-            $data_variation[0] = 'http://' . $domain; // insecure, no-www
-            $data_variation[1] = 'http://www.' . $domain; // insecure, www
-            $data_variation[2] = 'https://' . $domain; // secure, no-www
-            $data_variation[3] = 'https://www.' . $domain; // secure, www
+            $url_variations = array();
+            $url_variations[0] = 'http://' . $domain; // insecure, no-www
+            $url_variations[1] = 'http://www.' . $domain; // insecure, www
+            $url_variations[2] = 'https://' . $domain; // secure, no-www
+            $url_variations[3] = 'https://www.' . $domain; // secure, www
             // port 443
-            $data_variation[4] = 'http://' . $domain . ':443'; // insecure, no-www
-            $data_variation[5] = 'http://www.' . $domain . ':443'; // insecure, www
-            $data_variation[6] = 'https://' . $domain . ':443'; // secure, no-www
-            $data_variation[7] = 'https://www.' . $domain . ':443'; // secure, www
+            $url_variations[4] = 'http://' . $domain . ':443'; // insecure, no-www
+            $url_variations[5] = 'http://www.' . $domain . ':443'; // insecure, www
+            $url_variations[6] = 'https://' . $domain . ':443'; // secure, no-www
+            $url_variations[7] = 'https://www.' . $domain . ':443'; // secure, www
 
-            $data_result = explode(" -> ", $http_header_data);
-
-            $count = 0;
-
-            foreach ($data_result as $value) {
-
-                $data_result_formatted[$count] = $value;
-                $count++;
-
-            }
-
-            $all_same_domain = !array_diff($data_result_formatted, $data_variation);
+            $all_same_domain = !array_diff($header_data_array, $url_variations);
 
             if ($all_same_domain === true) {
 
                 $final_http_header_status = 'Live Site (200)';
 
             }
-
-            unset($data_variation);
-            unset($data_result);
-            unset($data_result_formatted);
 
         }
 
