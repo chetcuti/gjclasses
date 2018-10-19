@@ -1,5 +1,8 @@
 GJClasses CHANGELOG
 ===================
+v0.8.0    2018-10-19
+- Updated HttpHeader class
+
 v0.7.0    2018-10-18
 - Added HttpHeader class
 - Added HttpHeader class example
