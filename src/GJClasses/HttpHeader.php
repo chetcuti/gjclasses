@@ -22,14 +22,15 @@ class HttpHeader
         stream_context_set_default(
             array(
                 'http' => array(
-                    'method' => "HEAD",
+                    'timeout' => 8,
+                    'method' => "GET",
                     'header' => "Accept-language: en\r\n" .
                         "Cookie: LANGUAGE=en;DEFLANG=en;"
                 )
             )
         );
 
-        return get_headers('http://' . $domain);
+        return @get_headers('http://' . $domain);
     }
 
     public function processRules($domain, $headers)
