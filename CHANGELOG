@@ -1,5 +1,8 @@
 GJClasses CHANGELOG
 ===================
+v0.9.0    2018-10-22
+- Updated HttpHeader rules
+
 v0.8.0    2018-10-19
 - Updated HttpHeader class
 
