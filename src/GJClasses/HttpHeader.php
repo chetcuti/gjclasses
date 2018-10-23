@@ -103,9 +103,18 @@ class HttpHeader
 
         } else {
 
-            $final_header_status = $headers['0'];
+            if (!$headers['0'] || $headers['0'] == '') {
+
+                $final_header_status = 'Error Retrieving Headers';
+
+            } else {
+
+                $final_header_status = $headers['0'];
+
+            }
+
             $header_data = '';
-            $final_destination = 'http://' . $domain;
+            $final_destination = '';
 
         }
 
