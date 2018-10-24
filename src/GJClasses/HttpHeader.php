@@ -38,7 +38,7 @@ class HttpHeader
         if ($headers['0'] == 'HTTP/1.0 200 OK' || $headers['0'] == 'HTTP/1.1 200 OK') {
 
             $final_header_status = 'Live Site (200)';
-            $header_data = '';
+            $header_data = 'n/a';
             $final_destination = 'http://' . $domain;
 
         } elseif ($headers['0'] == 'HTTP/1.0 301 Moved Permanently' || $headers['0'] == 'HTTP/1.1 301 Moved Permanently') {
@@ -68,38 +68,38 @@ class HttpHeader
         } elseif ($headers['0'] == 'HTTP/1.0 400 Bad Request') {
 
             $final_header_status = 'Bad Request (400)';
-            $header_data = '';
-            $final_destination = 'http://' . $domain;
+            $header_data = 'n/a';
+            $final_destination = 'n/a';
 
         } elseif ($headers['0'] == 'HTTP/1.1 403 Forbidden') {
 
             $final_header_status = 'Forbidden (403)';
-            $header_data = '';
-            $final_destination = 'http://' . $domain;
+            $header_data = 'n/a';
+            $final_destination = 'n/a';
 
         } elseif ($headers['0'] == 'HTTP/1.0 404 Not Found' || $headers['0'] == 'HTTP/1.1 404 Not Found') {
 
             $final_header_status = 'Not Found (404)';
-            $header_data = '';
-            $final_destination = 'http://' . $domain;
+            $header_data = 'n/a';
+            $final_destination = 'n/a';
 
         } elseif ($headers['0'] == 'HTTP/1.1 463' || $headers['0'] == 'HTTP/1.1 463 ') {
 
             $final_header_status = 'Unspecified Error (463)';
-            $header_data = '';
-            $final_destination = 'http://' . $domain;
+            $header_data = 'n/a';
+            $final_destination = 'n/a';
 
         } elseif ($headers['0'] == 'HTTP/1.0 500 Internal Server Error' || $headers['0'] == 'HTTP/1.1 500 Internal Server Error') {
 
             $final_header_status = 'Internal Server Error (500)';
-            $header_data = '';
-            $final_destination = 'http://' . $domain;
+            $header_data = 'n/a';
+            $final_destination = 'n/a';
 
         } elseif ($headers['0'] == 'HTTP/1.0 503 Service Unavailable' || $headers['0'] == 'HTTP/1.1 503 Service Unavailable' || $headers['0'] == 'HTTP/1.1 503 Service Temporarily Unavailable') {
 
             $final_header_status = 'Service Temporarily Unavailable (503)';
-            $header_data = '';
-            $final_destination = 'http://' . $domain;
+            $header_data = 'n/a';
+            $final_destination = 'n/a';
 
         } else {
 
@@ -113,8 +113,8 @@ class HttpHeader
 
             }
 
-            $header_data = '';
-            $final_destination = '';
+            $header_data = 'n/a';
+            $final_destination = 'n/a';
 
         }
 
@@ -168,7 +168,7 @@ class HttpHeader
 
             if ($all_same_domain === true) {
 
-                $final_http_header_status = 'Live Site (200)';
+                $final_http_header_status = 'Live Site (200) [With Redirects]';
 
             }
 
