@@ -1,5 +1,8 @@
 GJClasses CHANGELOG
 ===================
+v0.11.0    2018-10-25
+- Added Final Destination Domain Apex to the results
+
 v0.10.0    2018-10-24
 - Updated HttpHeader rules
 
