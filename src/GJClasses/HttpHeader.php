@@ -13,8 +13,8 @@ class HttpHeader
     public function process($domain)
     {
         $headers = $this->retrieve($domain);
-        list($status, $data, $final_destination) = $this->processRules($domain, $headers);
-        return array($status, $data, $final_destination);
+        list($status, $data, $final_destination, $final_destination_apex) = $this->processRules($domain, $headers);
+        return array($status, $data, $final_destination, $final_destination_apex);
     }
 
     public function retrieve($domain)
@@ -40,10 +40,11 @@ class HttpHeader
             $final_header_status = 'Live Site (200)';
             $header_data = 'n/a';
             $final_destination = 'http://' . $domain;
+            $final_destination_apex = $domain;
 
         } elseif ($headers['0'] == 'HTTP/1.0 301 Moved Permanently' || $headers['0'] == 'HTTP/1.1 301 Moved Permanently') {
 
-            list($header_data, $final_destination, $count) = $this->createData($domain, $headers);
+            list($header_data, $final_destination, $final_destination_apex, $count) = $this->createData($domain, $headers);
 
             if ($count === 1) {
                 $header_status = 'Redirect, Permanent (301)';
@@ -55,7 +56,7 @@ class HttpHeader
 
         } elseif ($headers['0'] == 'HTTP/1.0 302 Found' || $headers['0'] == 'HTTP/1.1 302 Found' || $headers['0'] == 'HTTP/1.1 302 Moved Temporarily') {
 
-            list($header_data, $final_destination, $count) = $this->createData($domain, $headers);
+            list($header_data, $final_destination, $final_destination_apex, $count) = $this->createData($domain, $headers);
 
             if ($count === 1) {
                 $header_status = 'Redirect, Temporary (302)';
@@ -70,36 +71,42 @@ class HttpHeader
             $final_header_status = 'Bad Request (400)';
             $header_data = 'n/a';
             $final_destination = 'n/a';
+            $final_destination_apex = 'n/a';
 
         } elseif ($headers['0'] == 'HTTP/1.1 403 Forbidden') {
 
             $final_header_status = 'Forbidden (403)';
             $header_data = 'n/a';
             $final_destination = 'n/a';
+            $final_destination_apex = 'n/a';
 
         } elseif ($headers['0'] == 'HTTP/1.0 404 Not Found' || $headers['0'] == 'HTTP/1.1 404 Not Found') {
 
             $final_header_status = 'Not Found (404)';
             $header_data = 'n/a';
             $final_destination = 'n/a';
+            $final_destination_apex = 'n/a';
 
         } elseif ($headers['0'] == 'HTTP/1.1 463' || $headers['0'] == 'HTTP/1.1 463 ') {
 
             $final_header_status = 'Unspecified Error (463)';
             $header_data = 'n/a';
             $final_destination = 'n/a';
+            $final_destination_apex = 'n/a';
 
         } elseif ($headers['0'] == 'HTTP/1.0 500 Internal Server Error' || $headers['0'] == 'HTTP/1.1 500 Internal Server Error') {
 
             $final_header_status = 'Internal Server Error (500)';
             $header_data = 'n/a';
             $final_destination = 'n/a';
+            $final_destination_apex = 'n/a';
 
         } elseif ($headers['0'] == 'HTTP/1.0 503 Service Unavailable' || $headers['0'] == 'HTTP/1.1 503 Service Unavailable' || $headers['0'] == 'HTTP/1.1 503 Service Temporarily Unavailable') {
 
             $final_header_status = 'Service Temporarily Unavailable (503)';
             $header_data = 'n/a';
             $final_destination = 'n/a';
+            $final_destination_apex = 'n/a';
 
         } else {
 
@@ -115,10 +122,11 @@ class HttpHeader
 
             $header_data = 'n/a';
             $final_destination = 'n/a';
+            $final_destination_apex = 'n/a';
 
         }
 
-        return array($final_header_status, $header_data, $final_destination);
+        return array($final_header_status, $header_data, $final_destination, $final_destination_apex);
     }
 
     public function createData($domain, $headers)
@@ -136,9 +144,15 @@ class HttpHeader
         }
         $header_data = substr($header_data, 0, -4);
         $final_destination = substr($no_slash, 10);
+        $final_destination_apex = $this->getDomainApex($final_destination);
 
-        return array($header_data, $final_destination, $count);
+        return array($header_data, $final_destination, $final_destination_apex, $count);
 
+    }
+
+    public function getDomainApex($domain)
+    {
+        return ltrim(parse_url($domain, PHP_URL_HOST), 'www.');
     }
 
     public function checkSameRedirects($domain, $http_header_status, $http_header_data)
