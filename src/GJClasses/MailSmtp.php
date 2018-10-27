@@ -20,27 +20,36 @@ class MailSmtp
         $mail->setFrom($from_address, $from_name);
         $mail->addReplyTo($reply_address, $reply_name);
 
-        foreach ($recipients AS $recipient) {
+        if ($recipients) {
 
-            $mail->Subject = $subject;
-            $mail->Body = $message_html;
-            $mail->AltBody = $message_text;
-            $mail->clearAddresses();
-            $mail->addAddress($recipient);
+            foreach ($recipients AS $recipient) {
 
-            if ($mail->send()) {
+                $mail->Subject = $subject;
+                $mail->Body = $message_html;
+                $mail->AltBody = $message_text;
+                $mail->clearAddresses();
+                $mail->addAddress($recipient);
 
-                $result_message = 'Email Send Succeeded';
+                if ($mail->send()) {
 
-            } else {
+                    $result_message = 'Email Send Succeeded';
 
-                $result_message = 'Email Send Failed';
+                } else {
+
+                    $result_message = 'Email Send Failed';
+
+                }
 
             }
+
+        } else {
+
+            $result_message = 'Nothing to send';
 
         }
 
         return $result_message;
 
     }
+
 }
