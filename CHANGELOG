@@ -1,5 +1,10 @@
 GJClasses CHANGELOG
 ===================
+v0.12.0    2018-10-26
+- Added Smtp class
+- Added Smtp class example
+- Renamed named constants in init.inc.php
+
 v0.11.0    2018-10-25
 - Added Final Destination Domain Apex to the results
 
