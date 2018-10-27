@@ -1,7 +1,7 @@
 <?php
 namespace GJClasses;
 
-class Smtp
+class MailSmtp
 {
     public function send($recipients, $subject, $message_html, $message_text)
     {

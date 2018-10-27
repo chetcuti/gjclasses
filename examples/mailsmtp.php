@@ -16,7 +16,7 @@ define('SMTP_PORT', 587);
 
 require_once GJC_DIR_ROOT . '/vendor/autoload.php';
 
-$smtp = new GJClasses\Smtp();
+$smtp = new GJClasses\MailSmtp();
 
 $recipients = array('address1@example.com', 'address2@example.com');
 $subject = "Example Subject";
