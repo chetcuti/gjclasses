@@ -3,7 +3,7 @@ namespace GJClasses;
 
 class MailSmtp
 {
-    public function send($recipients, $subject, $message_html, $message_text)
+    public function send($from_name, $from_address, $reply_name, $reply_address, $recipients, $subject, $message_html, $message_text)
     {
         $mail = new \PHPMailer();
 
@@ -17,8 +17,8 @@ class MailSmtp
         $mail->SMTPAuth = SMTP_AUTHENTICATION_ON;
         $mail->Username = SMTP_USERNAME;
         $mail->Password = SMTP_PASSWORD;
-        $mail->setFrom(SMTP_FROM_ADDRESS, SMTP_FROM_NAME);
-        $mail->addReplyTo(SMTP_REPLY_ADDRESS, SMTP_REPLY_NAME);
+        $mail->setFrom($from_address, $from_name);
+        $mail->addReplyTo($reply_address, $reply_name);
 
         foreach ($recipients AS $recipient) {
 
