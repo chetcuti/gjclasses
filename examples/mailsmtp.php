@@ -21,7 +21,7 @@ $subject = "Example Subject";
 $message_html = 'This is the HTML message.';
 $message_text = 'This is the TEXT message.';
 
-$smtp = new GJClasses\MailSmtp();
-$message = $smtp->send($from_name, $from_address, $reply_name, $reply_address, $recipients, $subject, $message_html, $message_text);
+$mail = new GJClasses\MailSmtp();
+$message = $mail->send($from_name, $from_address, $reply_name, $reply_address, $recipients, $subject, $message_html, $message_text);
 
 echo $message;

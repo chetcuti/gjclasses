@@ -12,7 +12,7 @@ $recipients = array('address1@example.com', 'address2@example.com');
 $subject = "Example Subject";
 $message_html = 'This is the HTML message.';
 
-$smtp = new GJClasses\MailPhp();
-$message = $smtp->send($from_name, $from_address, $reply_name, $reply_address, $recipients, $subject, $message_html);
+$mail = new GJClasses\MailPhp();
+$message = $mail->send($from_name, $from_address, $reply_name, $reply_address, $recipients, $subject, $message_html);
 
 echo $message;
