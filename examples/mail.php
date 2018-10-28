@@ -3,16 +3,16 @@ require_once __DIR__ . '/../_includes/init.inc.php';
 require_once GJC_DIR_INC . '/config.inc.php';
 
 // 0 = mail() send via PHP, 1 = SMTP Send via PHPMailer (1 is strongly preferred and encouraged!)
-define('USE_SMTP', 1);
+define('GJC_USE_SMTP', 1);
 
-// If USE_SMTP is set to 1, you'll also need the following settings for the MailSmtp class
-define('EMAIL_ENCODING_TYPE', 'UTF-8');
-define('SMTP_MAIL_SERVER', 'mail.example.com');
-define('SMTP_AUTHENTICATION_ON', true);
-define('SMTP_USERNAME', 'mail@example.com');
-define('SMTP_PASSWORD', '@cc0untp@55w0rd');
-define('SMTP_PROTOCOL', 'tls');
-define('SMTP_PORT', 587);
+// If GJC_USE_SMTP is set to 1, you'll also need the following settings for the MailSmtp class
+define('GJC_EMAIL_ENCODING_TYPE', 'UTF-8');
+define('GJC_SMTP_MAIL_SERVER', 'mail.example.com');
+define('GJC_SMTP_AUTHENTICATION_ON', true);
+define('GJC_SMTP_USERNAME', 'mail@example.com');
+define('GJC_SMTP_PASSWORD', '@cc0untp@55w0rd');
+define('GJC_SMTP_PROTOCOL', 'tls');
+define('GJC_SMTP_PORT', 587);
 
 require_once GJC_DIR_ROOT . '/vendor/autoload.php';
 

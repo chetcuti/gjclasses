@@ -7,13 +7,13 @@
 require_once __DIR__ . '/../_includes/init.inc.php';
 require_once GJC_DIR_INC . '/config.inc.php';
 
-define('EMAIL_ENCODING_TYPE', 'UTF-8');
-define('SMTP_MAIL_SERVER', 'mail.example.com');
-define('SMTP_AUTHENTICATION_ON', true);
-define('SMTP_USERNAME', 'mail@example.com');
-define('SMTP_PASSWORD', '@cc0untp@55w0rd');
-define('SMTP_PROTOCOL', 'tls');
-define('SMTP_PORT', 587);
+define('GJC_EMAIL_ENCODING_TYPE', 'UTF-8');
+define('GJC_SMTP_MAIL_SERVER', 'mail.example.com');
+define('GJC_SMTP_AUTHENTICATION_ON', true);
+define('GJC_SMTP_USERNAME', 'mail@example.com');
+define('GJC_SMTP_PASSWORD', '@cc0untp@55w0rd');
+define('GJC_SMTP_PROTOCOL', 'tls');
+define('GJC_SMTP_PORT', 587);
 
 require_once GJC_DIR_ROOT . '/vendor/autoload.php';
 

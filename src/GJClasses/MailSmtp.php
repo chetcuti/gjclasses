@@ -10,13 +10,13 @@ class MailSmtp
         // $mail->SMTPDebug = 3;
         $mail->isSMTP();
         $mail->isHTML(true);
-        $mail->CharSet = EMAIL_ENCODING_TYPE;
-        $mail->SMTPSecure = SMTP_PROTOCOL;
-        $mail->Host = SMTP_MAIL_SERVER;
-        $mail->Port = SMTP_PORT;
-        $mail->SMTPAuth = SMTP_AUTHENTICATION_ON;
-        $mail->Username = SMTP_USERNAME;
-        $mail->Password = SMTP_PASSWORD;
+        $mail->CharSet = GJC_EMAIL_ENCODING_TYPE;
+        $mail->SMTPSecure = GJC_SMTP_PROTOCOL;
+        $mail->Host = GJC_SMTP_MAIL_SERVER;
+        $mail->Port = GJC_SMTP_PORT;
+        $mail->SMTPAuth = GJC_SMTP_AUTHENTICATION_ON;
+        $mail->Username = GJC_SMTP_USERNAME;
+        $mail->Password = GJC_SMTP_PASSWORD;
         $mail->setFrom($from_address, $from_name);
         $mail->addReplyTo($reply_address, $reply_name);
 
