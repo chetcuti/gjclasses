@@ -1,5 +1,14 @@
 GJClasses CHANGELOG
 ===================
+v0.14.0    2018-10-28
+- Added Mail class
+- Added Mail class example
+- Added MailPhp class
+- Added MailPhp class example
+- Updated named constant names
+- Updated class examples
+- Cleaned up MailSmtp send code
+
 v0.13.0    2018-10-27
 - Renamed Smtp class to MailSmtp
 - Updated MailSmtp class
