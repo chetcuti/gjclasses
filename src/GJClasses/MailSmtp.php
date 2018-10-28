@@ -22,6 +22,8 @@ class MailSmtp
 
         if ($recipients) {
 
+            $result_message = 'Email Send Failed';
+
             foreach ($recipients AS $recipient) {
 
                 $mail->Subject = $subject;
