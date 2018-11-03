@@ -10,7 +10,7 @@ class Log
 
     public function __construct($area)
     {
-        $this->user_id = $_SESSION['s_user_id'];
+        $this->user_id = isset($_SESSION['s_user_id']) ? $_SESSION['s_user_id'] : 0;
         $this->area = $area;
         $this->time = new Time();
         $this->url = $_SERVER['REQUEST_URI'];
