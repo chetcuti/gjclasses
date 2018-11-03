@@ -1,5 +1,10 @@
 GJClasses CHANGELOG
 ===================
+v0.16.0    2018-11-03
+- Added Time class example
+- Added Export class example
+- Code cleanup
+
 v0.15.0    2018-10-28
 - Added System class
 - Added Format class
