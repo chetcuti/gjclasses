@@ -15,6 +15,9 @@
     ],
     "require": {
         "php": ">=5.4.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-pdo": "*",
         "phpmailer/phpmailer": "5.2.*",
         "ivkos/pushbullet": "3.*"
     },
