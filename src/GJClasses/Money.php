@@ -12,7 +12,7 @@ class Money
     {
         list($currency_slug, $full_url) = $this->getConvUrl($from_currency, $to_currency);
         $remote = new Remote();
-        $result = $remote->getFileContents('Currency Conversion', $full_url);
+        $result = $remote->getFileContents($full_url);
         $json_result = json_decode($result);
         $conversion_rate = $json_result->{$currency_slug}->val;
 

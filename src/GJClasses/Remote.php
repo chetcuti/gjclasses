@@ -3,7 +3,7 @@ namespace GJClasses;
 
 class Remote
 {
-    public function getFileContents($file_title, $filename)
+    public function getFileContents($filename)
     {
         if (ini_get('allow_url_fopen') && extension_loaded('openssl')) {
 
