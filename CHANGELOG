@@ -1,5 +1,12 @@
 GJClasses CHANGELOG
 ===================
+v0.19.0    2018-11-10
+- Added donatj/pushover to Composer requirements
+- Added Pushover class
+- Added Pushover class example
+- Added Pushover support to Push class
+- Cleaned up Pushbullet Class and example
+
 v0.18.0    2018-11-08
 - Updated project dependencies
 
