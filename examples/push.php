@@ -4,14 +4,14 @@ require_once GJC_DIR_INC . '/config.inc.php';
 
 require_once GJC_DIR_ROOT . '/vendor/autoload.php';
 
-$push_provider = 'pushbullet';
-$api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; // Push Provider API Key
-$type = 'url'; // note or url
-$subject = 'Push Subject';
-$content = 'This is the push content.';
-$url = 'https://en.wikipedia.org/wiki/Push_technology'; // Only required if $type = url
+$push_provider = 'xxxxxxxxxx'; // pushbullet or pushover
+$api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; // API Key -- All Push Providers
+$user_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; // User Key -- Pushover
+$subject = 'Push Subject'; // Subject -- All Push Providers
+$content = 'This is the push content.'; // Content -- All Push Providers
+$url = 'https://en.wikipedia.org/wiki/Push_technology'; // URL -- All Push Providers -- Leave blank to send Note
 
 $push = new GJClasses\Push($push_provider);
-$message = $push->push($api_key, $type, $subject, $content, $url);
+$message = $push->push($api_key, $user_key, $subject, $content, $url);
 
 echo $message;
