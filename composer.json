@@ -13,17 +13,18 @@
             "role": "Developer"
         }
     ],
+    "autoload": {
+        "psr-4": {
+            "GJClasses\\": "src/GJClasses/"
+        }
+    },
     "require": {
         "php": ">=5.4.0",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-pdo": "*",
         "phpmailer/phpmailer": "5.2.*",
-        "ivkos/pushbullet": "3.*"
-    },
-    "autoload": {
-        "psr-4": {
-            "GJClasses\\": "src/GJClasses/"
-        }
+        "ivkos/pushbullet": "3.*",
+        "donatj/pushover": "^2.0"
     }
 }
