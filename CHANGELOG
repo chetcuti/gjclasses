@@ -1,5 +1,9 @@
 GJClasses CHANGELOG
 ===================
+v0.20.0    2018-11-10
+- Added Notify class
+- Added Notify class example
+
 v0.19.0    2018-11-10
 - Added donatj/pushover to Composer requirements
 - Added Pushover class
