@@ -18,7 +18,6 @@ require_once GJC_DIR_ROOT . '/vendor/autoload.php';
 
 // General/Common Settings
 $method = 'all'; // all, email, push
-$subject = 'Example Subject';
 
 // Email Settings
 $from_name = "From Name";
@@ -26,6 +25,7 @@ $from_address = "from@example.com";
 $reply_name = "Reply Name";
 $reply_address = "reply@example.com";
 $recipients = array('address1@example.com', 'address2@example.com');
+$email_subject = 'Email Subject';
 $message_html = 'This is the HTML message.';
 $message_text = 'This is the TEXT message.';
 
@@ -33,8 +33,9 @@ $message_text = 'This is the TEXT message.';
 $push_provider = 'pushbullet'; // pushbullet or pushover
 $api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; // API Key -- All Push Providers
 $user_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; // User Key -- Pushover
+$push_subject = 'Push Subject';
 $content = 'This is the push content.'; // Content -- All Push Providers
 $url = 'https://en.wikipedia.org/wiki/Push_technology'; // URL -- All Push Providers -- Leave blank to send Note
 
-new \GJClasses\Notify($method, $from_name, $from_address, $reply_name, $reply_address, $recipients, $subject,
-    $message_html, $message_text, $push_provider, $api_key, $user_key, $content, $url);
+new \GJClasses\Notify($method, $from_name, $from_address, $reply_name, $reply_address, $recipients, $email_subject,
+    $message_html, $message_text, $push_provider, $api_key, $user_key, $push_subject, $content, $url);
