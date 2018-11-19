@@ -23,8 +23,9 @@
         "ext-curl": "*",
         "ext-json": "*",
         "ext-pdo": "*",
-        "phpmailer/phpmailer": "5.2.*",
+        "auth0/auth0-php": "~5.0",
+        "donatj/pushover": "^2.0",
         "ivkos/pushbullet": "3.*",
-        "donatj/pushover": "^2.0"
+        "phpmailer/phpmailer": "5.2.*"
     }
 }
