@@ -23,5 +23,5 @@ $auth0->login();
 // Logout
 $auth0->logout();
 
-// Check if logged in
-$auth0->check();
+// Check if logged in, and if so return the user's details
+$user_info = $auth0->check();
