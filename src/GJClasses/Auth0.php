@@ -33,7 +33,7 @@ class Auth0
 
         } else {
 
-            return;
+            return $user_info;
 
         }
 
