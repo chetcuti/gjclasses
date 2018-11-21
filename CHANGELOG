@@ -1,5 +1,9 @@
 GJClasses CHANGELOG
 ===================
+v0.24.0    2018-11-21
+- Updated Auth0 class
+- Updated Auth0 class example
+
 v0.23.0    2018-11-20
 - Updated Auth0 class
 - Updated Auth0 class example
