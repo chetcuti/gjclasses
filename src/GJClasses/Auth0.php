@@ -39,6 +39,15 @@ class Auth0
 
     }
 
+    public function errorCheck($error, $message)
+    {
+        if (isset($error) && $error != '') {
+            echo 'Error: ' . $message;
+            exit;
+        }
+        return;
+    }
+
     public function login()
     {
         $this->auth0->login();
