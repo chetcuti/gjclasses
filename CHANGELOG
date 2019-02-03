@@ -1,5 +1,11 @@
 GJClasses CHANGELOG
 ===================
+v0.25.0    2019-02-03
+- Added Sanitize class
+- Added Sanitize class example
+- Added Unsanitize class
+- Added Unsanitize class example
+
 v0.24.0    2018-11-21
 - Updated Auth0 class
 - Updated Auth0 class example
