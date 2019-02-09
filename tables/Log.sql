@@ -6,6 +6,6 @@ CREATE TABLE `log` (
   `message` longtext COLLATE utf8_unicode_ci NOT NULL,
   `extra` longtext COLLATE utf8_unicode_ci NOT NULL,
   `url` longtext COLLATE utf8_unicode_ci NOT NULL,
-  `insert_time` datetime NOT NULL DEFAULT '1978-01-23 00:00:00',
+  `insert_time` datetime NOT NULL DEFAULT '1970-01-01 00:00:00',
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
