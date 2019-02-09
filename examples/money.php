@@ -4,7 +4,9 @@ require_once GJC_DIR_INC . '/config.inc.php';
 
 require_once GJC_DIR_ROOT . '/vendor/autoload.php';
 
-$_SESSION['s_user_id'] = 23;
-$money = new GJClasses\Money();
+// Currency Converter Source
+// fcca = Free Currency Converter API (https://free.currencyconverterapi.com)
+// era  = Exchange Rates API (http://exchangeratesapi.io)
+$money = new GJClasses\Money('fcca');
 
-echo $money->getConvRate('USD', 'CAD');
+echo $money->getConvRate('CAD', 'USD');
