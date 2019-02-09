@@ -7,6 +7,6 @@ require_once GJC_DIR_ROOT . '/vendor/autoload.php';
 // Currency Converter Source
 // fcca = Free Currency Converter API (https://free.currencyconverterapi.com)
 // era  = Exchange Rates API (http://exchangeratesapi.io)
-$money = new GJClasses\Money('fcca');
+$currency = new GJClasses\Currency('fcca');
 
-echo $money->getConvRate('CAD', 'USD');
+echo $currency->getConvRate('CAD', 'USD');

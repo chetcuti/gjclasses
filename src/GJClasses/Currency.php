@@ -1,7 +1,7 @@
 <?php
 namespace GJClasses;
 
-class Money
+class Currency
 {
     public $source;
 
