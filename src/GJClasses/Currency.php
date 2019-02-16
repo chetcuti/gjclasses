@@ -17,6 +17,8 @@ class Currency
 
     public function getConvRate($from_currency, $to_currency)
     {
+        if ($from_currency == $to_currency) return 1.0;
+
         $conversion_rate = 0.0;
 
         if ($this->source === 'era') {
