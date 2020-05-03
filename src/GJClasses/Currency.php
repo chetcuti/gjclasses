@@ -30,16 +30,6 @@ class Currency
             $json_result = json_decode($result, true);
             $conversion_rate = $json_result['rates'][$to_currency];
 
-        } elseif ($this->source === 'fcca') {
-
-            $currency_slug = $from_currency . '_' . $to_currency;
-            $full_url = 'https://free.currencyconverterapi.com/api/v5/convert?q=' . $currency_slug . '&compact=y';
-            $remote = new Remote();
-            $result = $remote->getFileContents($full_url);
-            if ($result === false || $result === '{}') return false;
-            $json_result = json_decode($result);
-            $conversion_rate = $json_result->{$currency_slug}->val;
-
         }
 
         return $conversion_rate;
