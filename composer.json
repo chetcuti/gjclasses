@@ -20,9 +20,6 @@
     },
     "require": {
         "php": ">=5.4.0",
-        "ext-curl": "*",
-        "ext-json": "*",
-        "ext-pdo": "*",
         "auth0/auth0-php": "~5.0",
         "donatj/pushover": "^2.0",
         "ivkos/pushbullet": "3.*",
