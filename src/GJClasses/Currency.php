@@ -3,6 +3,7 @@ namespace GJClasses;
 
 class Currency
 {
+    public $api_key;
     public $source;
 
     public function __construct($source, $api_key)
