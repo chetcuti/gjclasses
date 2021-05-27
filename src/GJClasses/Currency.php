@@ -24,7 +24,7 @@ class Currency
 
         if ($this->source === 'era') {
 
-            $full_url = 'https://api.exchangeratesapi.io/latest?base=' . $from_currency . '&symbols=' . $to_currency;
+            $full_url = 'http://api.exchangeratesapi.io/v1/convert?access_key=' . $this->api_key . '&from=' . $from_currency . '&to=' . $to_currency;
             $remote = new Remote();
             $result = $remote->getFileContents($full_url);
             if ($result === false) return false;
