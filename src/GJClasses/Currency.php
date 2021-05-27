@@ -49,6 +49,15 @@ class Currency
             $json_result = json_decode($result, true);
             $conversion_rate = $json_result['rates'][$to_currency];
 
+        } elseif ($this->source === 'interzoid') {
+
+            $full_url = 'https://api.interzoid.com/convertcurrency?license=' . $this->api_key . '&from=' . $from_currency . '&to=' . $to_currency . '&amount=1';
+            $remote = new Remote();
+            $result = $remote->getFileContents($full_url);
+            if ($result === false) return false;
+            $json_result = json_decode($result, true);
+            $conversion_rate = $json_result['Converted'];
+
         }
 
         return $conversion_rate;

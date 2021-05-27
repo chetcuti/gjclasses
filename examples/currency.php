@@ -8,6 +8,7 @@ require_once GJC_DIR_ROOT . '/vendor/autoload.php';
 // era  = Exchange Rates API (http://exchangeratesapi.io)
 // er-a  = ExchangeRate-API (https://www.exchangerate-api.com)
 // fixer  = Fixer.io (https://fixer.io)
+// interzoid  = Interzoid (https://interzoid.com)
 $converter_source = 'era';
 
 // API Key
