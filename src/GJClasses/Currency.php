@@ -5,9 +5,10 @@ class Currency
 {
     public $source;
 
-    public function __construct($source)
+    public function __construct($source, $api_key)
     {
         $this->source = $source;
+        $this->api_key = $api_key;
     }
 
     public function convertAmount($amount, $from_currency, $to_currency)
@@ -29,6 +30,15 @@ class Currency
             if ($result === false) return false;
             $json_result = json_decode($result, true);
             $conversion_rate = $json_result['rates'][$to_currency];
+
+        } elseif ($this->source === 'er-a') {
+
+            $full_url = 'https://v6.exchangerate-api.com/v6/' . $this->api_key . '/pair/' . $from_currency . '/' . $to_currency;
+            $remote = new Remote();
+            $result = $remote->getFileContents($full_url);
+            if ($result === false) return false;
+            $json_result = json_decode($result, true);
+            $conversion_rate = $json_result['conversion_rate'];
 
         }
 

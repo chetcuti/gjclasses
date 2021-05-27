@@ -6,6 +6,12 @@ require_once GJC_DIR_ROOT . '/vendor/autoload.php';
 
 // Currency Converter Source
 // era  = Exchange Rates API (http://exchangeratesapi.io)
-$currency = new GJClasses\Currency('era');
+// er-a  = ExchangeRate-API (https://www.exchangerate-api.com)
+$converter_source = 'er-a';
 
-echo $currency->getConvRate('CAD', 'USD');
+// API Key
+$api_key = 'xxxx';
+
+$currency = new GJClasses\Currency($converter_source, $api_key);
+
+echo $currency->getConvRate('USD', 'CAD');
