@@ -40,6 +40,15 @@ class Currency
             $json_result = json_decode($result, true);
             $conversion_rate = $json_result['conversion_rate'];
 
+        } elseif ($this->source === 'fixer') {
+
+            $full_url = 'http://data.fixer.io/api/convert?access_key=' . $this->api_key . '&from=' . $from_currency . '&to=' . $to_currency;
+            $remote = new Remote();
+            $result = $remote->getFileContents($full_url);
+            if ($result === false) return false;
+            $json_result = json_decode($result, true);
+            $conversion_rate = $json_result['rates'][$to_currency];
+
         }
 
         return $conversion_rate;
