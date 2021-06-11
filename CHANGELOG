@@ -1,5 +1,8 @@
 GJClasses CHANGELOG
 ===================
+v0.31.0    2021-06-10
+- Added push notification support for Join
+
 v0.30.0    2021-05-27
 - Added support for ExchangeRate-API
 - Added support for Fixer.io
