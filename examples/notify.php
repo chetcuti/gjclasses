@@ -30,11 +30,11 @@ $message_html = 'This is the HTML message.';
 $message_text = 'This is the TEXT message.';
 
 // Push Settings
-$push_provider = 'pushbullet'; // pushbullet or pushover
+$push_provider = 'join'; // join, pushbullet, or pushover
 $api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; // API Key -- All Push Providers
 $user_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; // User Key -- Pushover
-$push_subject = 'Push Subject';
-$content = 'This is the push content.'; // Content -- All Push Providers
+$push_subject = 'Push Subject'; // Subject -- All Push Providers
+$content = 'This is the push content.'; // Content -- All Push Providers -- Ignored when sending URL (Join)
 $url = 'https://en.wikipedia.org/wiki/Push_technology'; // URL -- All Push Providers -- Leave blank to send Note
 
 new \GJClasses\Notify($method, $from_name, $from_address, $reply_name, $reply_address, $recipients, $email_subject,
