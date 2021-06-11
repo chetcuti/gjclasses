@@ -34,9 +34,7 @@ class Pushover
     {
         $push = new \donatj\Pushover\Pushover($api_key, $user_key);
         $push->send($content, array(
-            Options::TITLE => $subject,
-            Options::PRIORITY => Priority::HIGH,
-            Options::SOUND => Sounds::ALIEN,
+            Options::TITLE => $subject
         )) or die('Message Failed');
         return 'Note Sent';
     }
@@ -46,9 +44,7 @@ class Pushover
         $push = new \donatj\Pushover\Pushover($api_key, $user_key);
         $push->send($content, array(
             Options::TITLE => $subject,
-            Options::URL => $url,
-            Options::PRIORITY => Priority::HIGH,
-            Options::SOUND => Sounds::ALIEN,
+            Options::URL => $url
         )) or die('Message Failed');
         return 'URL Sent';
     }
