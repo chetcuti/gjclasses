@@ -18,7 +18,7 @@ class Push
             $push = new Join();
             $result_message = $push->push($api_key, $subject, $content, $url);
 
-        } elseif ($this->service == 'pushover') {
+        } elseif ($this->service == 'pushbullet') {
 
             $push = new Pushbullet();
             $result_message = $push->push($api_key, $subject, $content, $url);
