@@ -13,7 +13,12 @@ class Push
 
     public function push($api_key, $user_key, $subject, $content, $url)
     {
-        if ($this->service == 'pushbullet') {
+        if ($this->service == 'join') {
+
+            $push = new Join();
+            $result_message = $push->push($api_key, $subject, $content, $url);
+
+        } elseif ($this->service == 'pushover') {
 
             $push = new Pushbullet();
             $result_message = $push->push($api_key, $subject, $content, $url);
