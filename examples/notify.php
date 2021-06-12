@@ -30,12 +30,13 @@ $message_html = 'This is the HTML message.';
 $message_text = 'This is the TEXT message.';
 
 // Push Settings
-$push_provider = 'join'; // join, pushbullet, or pushover
-$api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; // API Key -- All Push Providers
-$user_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; // User Key -- Pushover
+$push_provider = 'pushover'; // join, pushbullet, or pushover
+$api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxx'; // API Key -- All Push Providers
+$user_key = 'xxxxxxxxxxxxxxxxxxxxxxxxx'; // User Key -- Pushover
 $push_subject = 'Push Subject'; // Subject -- All Push Providers
 $content = 'This is the push content.'; // Content -- All Push Providers -- Ignored when sending URL (Join)
 $url = 'https://en.wikipedia.org/wiki/Push_technology'; // URL -- All Push Providers -- Leave blank to send Note
+$priority = ''; // Priority -- Pushover -- Normal 0 or blank, High 1
 
 new \GJClasses\Notify($method, $from_name, $from_address, $reply_name, $reply_address, $recipients, $email_subject,
-    $message_html, $message_text, $push_provider, $api_key, $user_key, $push_subject, $content, $url);
+    $message_html, $message_text, $push_provider, $api_key, $user_key, $push_subject, $content, $url, $priority);
