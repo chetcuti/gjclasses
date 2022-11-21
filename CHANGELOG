@@ -1,5 +1,8 @@
 GJClasses CHANGELOG
 ===================
+v0.38.0    2022-11-20
+- Finished adding support for Telegram
+
 v0.37.0    2022-11-20
 - Added support for Telegram
 
