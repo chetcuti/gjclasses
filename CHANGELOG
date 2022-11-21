@@ -1,5 +1,8 @@
 GJClasses CHANGELOG
 ===================
+v0.37.0    2022-11-20
+- Added support for Telegram
+
 v0.36.0    2022-10-16
 - Updated PHP and PHPMailer versions
 
