@@ -30,13 +30,14 @@ $message_html = 'This is the HTML message.';
 $message_text = 'This is the TEXT message.';
 
 // Push Settings
-$push_provider = 'pushover'; // join, pushbullet, or pushover
-$api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxx'; // API Key -- All Push Providers
-$user_key = 'xxxxxxxxxxxxxxxxxxxxxxxxx'; // User Key -- Pushover
-$push_subject = 'Push Subject'; // Subject -- All Push Providers
+$push_provider = 'telegram'; // join, pushbullet, pushover, or telegram
+$api_key = 'xxxxxxxxxxxxxxxxxxxx'; // API Key -- All Push Providers
+$user_key = 'xxxxxxxxxxxxxxxxxxxx'; // User Key -- Pushover
+$subject = 'Notify Subject'; // Subject -- All Providers
 $content = 'This is the push content.'; // Content -- All Push Providers -- Ignored when sending URL (Join)
-$url = 'https://en.wikipedia.org/wiki/Push_technology'; // URL -- All Push Providers -- Leave blank to send Note
+$url = 'https://example.com'; // URL -- All Push Providers -- Leave blank to send Note
+$url_text = 'URL Text'; // URL Text -- Telegram -- Leave blank to use URL
 $priority = ''; // Priority -- Pushover -- Normal 0 or blank, High 1
 
 new \GJClasses\Notify($method, $from_name, $from_address, $reply_name, $reply_address, $recipients, $email_subject,
-    $message_html, $message_text, $push_provider, $api_key, $user_key, $push_subject, $content, $url, $priority);
+    $message_html, $message_text, $push_provider, $api_key, $user_key, $subject, $content, $url, $url_text, $priority);
