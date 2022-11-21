@@ -28,6 +28,11 @@ class Push
             $push = new Pushover();
             $result_message = $push->push($api_key, $user_key, $subject, $content, $url, $priority);
 
+        } elseif ($this->service == 'telegram') {
+
+            $push = new Telegram();
+            $result_message = $push->push($api_key, $user_key, $content);
+
         } else {
 
             $result_message = 'Invalid push service provider';
