@@ -1,5 +1,8 @@
 GJClasses CHANGELOG
 ===================
+v0.40.0    2022-11-23
+- Fixed issue with MailSmtp class
+
 v0.39.0    2022-11-20
 - Composer Updates
 
