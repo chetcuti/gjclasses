@@ -1,5 +1,8 @@
 GJClasses CHANGELOG
 ===================
+v0.41.0    2022-11-27
+- Added Personal API as a push option
+
 v0.40.0    2022-11-23
 - Fixed issue with MailSmtp class
 
