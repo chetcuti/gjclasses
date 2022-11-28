@@ -5,7 +5,7 @@ require_once GJC_DIR_INC . '/config.inc.php';
 require_once GJC_DIR_ROOT . '/vendor/autoload.php';
 
 // Push Settings
-$push_provider = 'telegram'; // join, pushbullet, pushover, or telegram
+$push_provider = 'telegram'; // join, personalapi, pushbullet, pushover, or telegram
 $api_key = 'xxxxxxxxxxxxxxxxxxxx'; // API Key -- All Push Providers
 $user_key = 'xxxxxxxxxxxxxxxxxxxx'; // User Key (Pushover) or Chat ID (Telegram)
 $subject = 'Push Subject'; // Subject -- All Push Providers -- Leave blank for no Subject

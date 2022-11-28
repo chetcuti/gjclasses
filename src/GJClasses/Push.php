@@ -18,6 +18,11 @@ class Push
             $push = new Join();
             $result_message = $push->push($api_key, $subject, $content, $url);
 
+        } elseif ($this->service == 'personalapi') {
+
+            $push = new PersonalApi();
+            $result_message = $push->push($subject, $content, $url);
+
         } elseif ($this->service == 'pushbullet') {
 
             $push = new Pushbullet();
