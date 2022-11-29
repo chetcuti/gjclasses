@@ -16,7 +16,7 @@ class PersonalApi
     public function pushNote($subject, $content, $url)
     {
         $full_url = 'https://api.greg.cloud/telegram';
-        $payload = '{"title": "' . $subject . '", "message": "' . $content . '", "url": "' . $url . '"}';
+        $payload = '{"title": "' . trim($subject) . '", "message": "' . trim($content) . '", "url": "' . trim($url) . '"}';
 
         $handle = curl_init($full_url);
         curl_setopt($handle, CURLOPT_ENCODING, '');
