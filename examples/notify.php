@@ -30,11 +30,11 @@ $message_html = 'This is the HTML message.';
 $message_text = 'This is the TEXT message.';
 
 // Push Settings
-$push_provider = 'telegram'; // join, pushbullet, pushover, or telegram
+$push_provider = 'telegram'; // join, personalapi, pushbullet, pushover, or telegram
 $api_key = 'xxxxxxxxxxxxxxxxxxxx'; // API Key -- All Push Providers
-$user_key = 'xxxxxxxxxxxxxxxxxxxx'; // User Key -- Pushover
-$subject = 'Notify Subject'; // Subject -- All Providers
-$content = 'This is the push content.'; // Content -- All Push Providers -- Ignored when sending URL (Join)
+$user_key = 'xxxxxxxxxxxxxxxxxxxx'; // User Key (Pushover) or Chat ID (Telegram)
+$subject = 'Notify Subject'; // Subject -- All Push Providers -- Leave blank for no Subject
+$content = 'This is the push content.'; // Content -- All Push Providers -- Ignored when sending URL (except w/Telegram)
 $url = 'https://example.com'; // URL -- All Push Providers -- Leave blank to send Note
 $url_text = 'URL Text'; // URL Text -- Telegram -- Leave blank to use URL
 $priority = ''; // Priority -- Pushover -- Normal 0 or blank, High 1
