@@ -1,5 +1,8 @@
 GJClasses CHANGELOG
 ===================
+v0.43.0    2022-12-08
+- Updated PersonalApi to accept API Key
+
 v0.42.0    2022-11-28
 - Ensured whitespace is removed before submitting PersonalApi API call
 
