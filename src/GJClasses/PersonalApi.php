@@ -4,19 +4,19 @@ namespace GJClasses;
 
 class PersonalApi
 {
-    public function push($subject, $content, $url)
+    public function push($api_key, $subject, $content, $url)
     {
         $push = new \GJClasses\Push('personalapi');
-        $message = $this->pushNote($subject, $content, $url);
+        $message = $this->pushNote($api_key, $subject, $content, $url);
 
         return $message;
 
     }
 
-    public function pushNote($subject, $content, $url)
+    public function pushNote($api_key, $subject, $content, $url)
     {
-        $full_url = 'https://api.greg.cloud/telegram';
-        $payload = '{"title": "' . trim($subject) . '", "message": "' . trim($content) . '", "url": "' . trim($url) . '"}';
+        $full_url = 'https://api.greg.cloud/telegram_private';
+        $payload = '{"api_key": "' . trim($api_key) . '", "title": "' . trim($subject) . '", "message": "' . trim($content) . '", "url": "' . trim($url) . '"}';
 
         $handle = curl_init($full_url);
         curl_setopt($handle, CURLOPT_ENCODING, '');
