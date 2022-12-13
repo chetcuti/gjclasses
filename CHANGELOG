@@ -1,5 +1,8 @@
 GJClasses CHANGELOG
 ===================
+v0.44.0    2022-12-13
+- Updated PersonalApi endpoint
+
 v0.43.0    2022-12-08
 - Updated PersonalApi to accept API Key
 
