@@ -1,5 +1,8 @@
 GJClasses CHANGELOG
 ===================
+v0.46.0    2022-12-14
+- Fixed PersonalApi API call
+
 v0.45.0    2022-12-14
 - Updated PersonalApi API call
 
