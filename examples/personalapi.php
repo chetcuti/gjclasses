@@ -9,8 +9,9 @@ $api_key = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'; // API Key
 $subject = 'Subject'; // Subject -- Leave blank for no Subject
 $content = 'This is the push content.'; // Content
 $url = 'https://example.com'; // URL -- Leave blank to send Note
+$priority = '0'; // 0 = normal priority, 1 = high priority
 
 $push = new GJClasses\PersonalApi();
-$message = $push->push($api_key, $subject, $content, $url);
+$message = $push->push($api_key, $subject, $content, $url, $priority);
 
 echo $message;

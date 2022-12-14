@@ -21,7 +21,7 @@ class Push
         } elseif ($this->service == 'personalapi') {
 
             $push = new PersonalApi();
-            $result_message = $push->push($api_key, $subject, $content, $url);
+            $result_message = $push->push($api_key, $subject, $content, $url, $priority);
 
         } elseif ($this->service == 'pushbullet') {
 
