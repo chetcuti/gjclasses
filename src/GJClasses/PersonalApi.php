@@ -15,7 +15,10 @@ class PersonalApi
 
     public function pushNote($api_key, $subject, $content, $url, $priority)
     {
+        if ($priority == "") $priority = "0";
+
         $full_url = 'https://api.greg.cloud/notify';
+
         $payload = '{"api_key": "' . $api_key . '",
                      "title": "' . trim($subject) . '",
                      "message": "' . trim($content) . '",
