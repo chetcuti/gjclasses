@@ -1,7 +1,10 @@
 GJClasses CHANGELOG
 ===================
+v0.49.0    2022-12-17
+- Removed URL encoding in PersonalApi class
+
 v0.48.0    2022-12-17
-- Ensure PersonalApi has a default priority set
+- Ensured PersonalApi has a default priority set
 
 v0.47.0    2022-12-17
 - Made PersonalApi a stand-alone class
