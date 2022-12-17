@@ -30,7 +30,7 @@ $message_html = 'This is the HTML message.';
 $message_text = 'This is the TEXT message.';
 
 // Push Settings
-$push_provider = 'telegram'; // join, personalapi, pushbullet, pushover, or telegram
+$push_provider = 'telegram'; // join, pushbullet, pushover, or telegram
 $api_key = 'xxxxxxxxxxxxxxxxxxxx'; // API Key -- All Push Providers
 $user_key = 'xxxxxxxxxxxxxxxxxxxx'; // User Key (Pushover) or Chat ID (Telegram)
 $subject = 'Notify Subject'; // Subject -- All Push Providers -- Leave blank for no Subject

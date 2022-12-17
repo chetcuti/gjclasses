@@ -4,39 +4,36 @@ namespace GJClasses;
 
 class PersonalApi
 {
-    public function push($api_key, $subject, $content, $url, $priority)
+    public $api_key;
+    public $api_url;
+
+    public function __construct($api_key, $api_url)
     {
-        $push = new \GJClasses\Push('personalapi');
-        $message = $this->pushNote($api_key, $subject, $content, $url, $priority);
-
-        return $message;
-
+        $this->api_key = $api_key;
+        $this->api_url = $api_url;
     }
 
-    public function pushNote($api_key, $subject, $content, $url, $priority)
+    public function notify($title, $message, $url = '', $priority = '0')
     {
-        if ($priority == "") $priority = "0";
-
-        $full_url = 'https://api.greg.cloud/notify';
-
-        $payload = '{"api_key": "' . $api_key . '",
-                     "title": "' . trim($subject) . '",
-                     "message": "' . trim($content) . '",
-                     "url": "' . trim($url) . '",
+        $payload = '{"api_key": "' . $this->api_key . '",
+                     "title": "' . urlencode(trim($title)) . '",
+                     "message": "' . urlencode(trim($message)) . '",
+                     "url": "' . urlencode(trim($url)) . '",
                      "priority": "' . $priority . '"}';
 
-        $handle = curl_init($full_url);
+        $handle = curl_init($this->api_url);
         curl_setopt($handle, CURLOPT_ENCODING, '');
         curl_setopt($handle, CURLOPT_MAXREDIRS, 10);
-        curl_setopt($handle, CURLOPT_TIMEOUT, 30);
-        curl_setopt($handle, CURLOPT_POSTFIELDS, $payload);
-        curl_setopt($handle, CURLOPT_HTTPHEADER, array(
-            'Content-Type: application/json'));
         curl_setopt($handle, CURLOPT_RETURNTRANSFER, true);
-        $result = curl_exec($handle);
+        curl_setopt($handle, CURLOPT_TIMEOUT, 30);
+        curl_setopt($handle, CURLOPT_HTTPHEADER, array(
+            'Content-Type: application/json'
+        ));
+        curl_setopt($handle, CURLOPT_POSTFIELDS, $payload);
+        curl_exec($handle);
         curl_close($handle);
 
-        return 'URL Sent';
+        return 'Notification Sent';
     }
 
 }
