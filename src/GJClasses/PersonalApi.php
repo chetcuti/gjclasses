@@ -18,9 +18,9 @@ class PersonalApi
         if ($priority != '1') $priority = '0';
 
         $payload = '{"api_key": "' . $this->api_key . '",
-                     "title": "' . urlencode(trim($title)) . '",
-                     "message": "' . urlencode(trim($message)) . '",
-                     "url": "' . urlencode(trim($url)) . '",
+                     "title": "' . trim($title) . '",
+                     "message": "' . trim($message) . '",
+                     "url": "' . trim($url) . '",
                      "priority": "' . $priority . '"}';
 
         $handle = curl_init($this->api_url);
