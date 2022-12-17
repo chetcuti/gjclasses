@@ -15,6 +15,8 @@ class PersonalApi
 
     public function notify($title, $message, $url = '', $priority = '0')
     {
+        if ($priority != '1') $priority = '0';
+
         $payload = '{"api_key": "' . $this->api_key . '",
                      "title": "' . urlencode(trim($title)) . '",
                      "message": "' . urlencode(trim($message)) . '",
