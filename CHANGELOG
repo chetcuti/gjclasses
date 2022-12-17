@@ -1,5 +1,8 @@
 GJClasses CHANGELOG
 ===================
+v0.48.0    2022-12-17
+- Ensure PersonalApi has a default priority set
+
 v0.47.0    2022-12-17
 - Made PersonalApi a stand-alone class
 
