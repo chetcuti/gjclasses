@@ -13,12 +13,12 @@ class PersonalApi
         $this->api_url = $api_url;
     }
 
-    public function notify($title, $message, $url = '', $priority = '0')
+    public function notify($subject, $message, $url = '', $priority = '0')
     {
         if ($priority != '1') $priority = '0';
 
         $payload = '{"api_key": "' . $this->api_key . '",
-                     "title": "' . trim($title) . '",
+                     "subject": "' . trim($subject) . '",
                      "message": "' . trim($message) . '",
                      "url": "' . trim($url) . '",
                      "priority": "' . $priority . '"}';
