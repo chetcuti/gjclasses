@@ -8,7 +8,7 @@ require_once GJC_DIR_ROOT . '/vendor/autoload.php';
 // era  = http://exchangeratesapi.io
 // er-a  = https://www.exchangerate-api.com
 // erh = https://exchangerate.host
-// fcra = https://github.com/fawazahmed0/currency-api -- NO API KEY REQUIRED!
+// fcra = https://github.com/fawazahmed0/exchange-api -- NO API KEY REQUIRED!
 // fixer  = https://fixer.io
 // interzoid  = https://interzoid.com
 $converter_source = 'fcra';
