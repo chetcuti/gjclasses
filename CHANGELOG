@@ -1,5 +1,8 @@
 GJClasses CHANGELOG
 ===================
+v0.53.0    2024-08-05
+- Fixed git tags (maybe?)
+
 v0.52.0    2024-08-05
 - Migrated to NPM Free Currency Exchange Rates API
 
